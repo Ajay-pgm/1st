@@ -1,0 +1,136 @@
+<!Doctype html>
+<html>
+    <head><title > Registation form </title>
+          <script src='js/jqury.min.js'></script>
+        <script src="jquery-ui.js"></script>
+        <link href="jquery-ui.min.css" rel="stylesheet">
+        <link href="css/2nd.css" rel="stylesheet" type="text/css">
+      
+        <script>
+             $(document).ready(function(){
+            
+         $('#sh').click(function(){      //check propr code or do it again
+                var typ =$('#pwd').attr('type');
+                if(typ =='password')
+                    {
+                        $('#pwd').attr('type','text');
+                        $('#sh').html('hide');
+                    }else
+                    {
+                        $('#pwd').attr('type','password');
+                        $('#sh').html('show');
+
+                        
+                    }
+            });
+             });
+            
+           $(function(){
+             $('#su').click(function(){
+             window.confirm("Login succesful"); 
+        
+         });
+                
+        });
+        
+        </script>
+    </head>
+<body >
+    <fieldset>
+            
+              <h1 style="text-shadow: 1px 2px 5px red" ><center><b>Register here</b></center>
+        
+        </h1>
+            <hr>
+        <hr>   
+        <fieldset ><legend>Mandatry fields</legend>
+    
+    <center><form action="add" method="post">
+                    <table  cellspacing="10">
+                  
+                        
+                    <tr>
+                    
+                    <td>Profile pic</td>
+                    <td><input type="file" name="pic"></td>
+                 </tr>
+                        
+                <tr>
+                         <td>Username: &#160; <input type="text" maxlength="10" accesskey="u" required placeholder="Boss12" name="usr"></td>
+                        <td>Password:&#160; <input type="password" name="pass" maxlength="8" accesskey="p" required id="pwd"><button id="sh">show</button>
+                    </td>
+                </tr><br><br>
+                
+                <tr>
+                    <td>Contact*: <input type="number" name="contact" maxlenght="10" required></td>
+                    <td>Email*: <input type="email" name="email" required  placeholder="Example@.com"></td>
+                </tr>
+                        <tr><td>License no*<input type="number" name="no" maxlenght='10' required value="no"></td>
+                            <td>Pan no*<input type="text" name="pan" placeholder="P154N125b" maxlenght="10" required></td>
+                 
+                        </tr>
+                   <tr>
+                        <td>Distic:<select name="Distic">
+                        <option name="select">--Select--</option>
+                        <option name="TH">Thane</option>
+                        <option name="Sahad">Sahad</option>
+                        <option name="MZ">Mirzapur</option>
+                        <td>State:<select name="State" multiple >
+                            <option name="Select">--state--</option>
+                            <option name="MH"> Maharastra</option>
+                            <option name="UP">Uttarpradesh</option>
+                            <option name="DL">Delhi</option>
+                            <option name="Surat">Surat</option>
+                            </select></td>
+                        </select>  </td></tr>
+                <tr>
+    <tr>                    
+            <td>Payment*: <input type="radio"  name="Catagory" value="Male">cash on delivery
+                            <input type="radio"  name="Catagory"  value="Female">net banking
+                            <input type="radio" name="Catagory" value="other">other
+                            
+            </td></tr>
+             
+                        
+            </table>
+        </form>
+        </center>
+        </fieldset>
+        <hr>
+    <fieldset></fieldset>
+        <fieldset ><legend>Personal's  Info</legend>
+    <center>     <table cellspacing="10">
+            <tr>
+            <td> Name*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="na" placeholder="First Name " required>
+                        <input type="text" name="na" placeholder="Last name"></td>
+            </tr>
+        <tr>
+            <td>Father's name*:<input type="text" name="na" placeholder="First name" required>
+                                <input type="text" name="nam" placeholder="Last name" required></td>
+        </tr>
+        <tr>
+        <td>Address*:<textarea></textarea>
+            Aadhar no*:<input type="text" maxlength="10" required name="adhar">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender: <input type="radio"  name="Catagory" value="Male">Male
+                            <input type="radio"  name="Catagory"  value="Female">Female
+                            <input type="radio" name="Catagory" value="other">other
+                            
+            </td></tr>
+            <tr><td> Use with:<input type="radio" name="status" value="Family">Family
+                                <input type="radio" name="status" value="Friend"> Friends
+                                <input type="radio" name="status" value="alone"> single
+                                
+                </td></tr>
+        <tr> 
+            <td><input type="submit" name="Save" href="1st-p.html" id="su">
+                 <input type="reset" name="Cancel" id="res"></td></tr>
+            </table> </form></center>    
+        </fieldset>
+    
+    <hr><hr>
+    </body>
+    
+</html>
